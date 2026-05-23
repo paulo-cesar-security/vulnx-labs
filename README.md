@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<html>
+   <Style>
+     {
             rgba(255,255,255,0.03) 1px,
             transparent 1px,
             transparent 3px
