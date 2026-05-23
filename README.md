@@ -1,3 +1,69 @@
+<!DOCTYPE html>
+            rgba(255,255,255,0.03) 1px,
+            transparent 1px,
+            transparent 3px
+        );
+        pointer-events: none;
+        mix-blend-mode: soft-light;
+    }
+</style>
+</head>
+<body class="scanlines">
+
+<div class="terminal">
+    <div class="text" id="text"></div>
+    <div class="cursor">_</div>
+</div>
+
+<script>
+const firstText = "Hi, I'm Paulo Cesar 👾";
+const secondText = "Cybersecurity.";
+
+const textElement = document.getElementById("text");
+
+const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+async function typeText(text, speed = 90) {
+    for (let i = 0; i <= text.length; i++) {
+        textElement.textContent = "> " + text.slice(0, i);
+        await wait(speed + Math.random() * 60);
+    }
+}
+
+async function deleteText(speed = 60) {
+    while (textElement.textContent.length > 2) {
+        textElement.textContent = textElement.textContent.slice(0, -1);
+        await wait(speed + Math.random() * 40);
+    }
+}
+
+async function loopAnimation() {
+    while (true) {
+        textElement.textContent = "> ";
+
+        await typeText(firstText, 80);
+
+        await wait(1000);
+
+        await deleteText(55);
+
+        await wait(400);
+
+        await typeText(secondText, 90);
+
+        await wait(1800);
+
+        await deleteText(45);
+
+        await wait(500);
+    }
+}
+
+loopAnimation();
+</script>
+
+</body>
+</html>
 # Vulnx Labs
 ## Cybersecurity Portfolio
 
