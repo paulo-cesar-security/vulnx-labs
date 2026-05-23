@@ -1,6 +1,22 @@
-<html>
-   <Style>
-     {
+<html lang="pt-BR">
+    }
+
+    @keyframes blink {
+        0%, 50% {
+            opacity: 1;
+        }
+        51%, 100% {
+            opacity: 0;
+        }
+    }
+
+    .scanlines::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: repeating-linear-gradient(
+            to bottom,
+            rgba(255,255,255,0.03),
             rgba(255,255,255,0.03) 1px,
             transparent 1px,
             transparent 3px
