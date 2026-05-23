@@ -1,6 +1,3 @@
-<p align="center">
-https://cyberdefesabrazil.blogspot.com/p/keyframes-blink-0-50-opacity-1-51-100.html
-</p>
 # Vulnx Labs
 ## Cybersecurity Portfolio
 
